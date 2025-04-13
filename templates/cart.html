@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href={% static 'css/menu.css' %}>    
+    <link rel="stylesheet" href={% static 'css/catalog.css' %}>
+    <link rel="stylesheet" href={% static 'css/login.css' %}>
+    <link rel="stylesheet" href={% static 'css/cart.css' %}>
+    <script src="{% static 'js/cart.js' %}" defer></script>
+{% endblock %}
+
+{%  block content %}
+<h2>Ваша корзина : </h2>
+    <h3>
+    {{ sps }}
+    </h3>
+    {% if itemslen == 0 %}
+        <h3>В корзине пока пусто</h3>
+        <h3>Ждем ваших покупок)</h3>
+    {% else %}
+        
+<table class="table">
+    {% for one in items %}
+    <tr>
+        <td>{{ one.tovar.name }}</td>
+        <td>
+            <img src="{% static one.tovar.image %}" alt="" height="150px" width="auto">
+        </td>
+        <td>
+        <a href="{% url 'edit' one.id -1 %}">
+            <button> - </button>
+        </a>
+        </td>    
+            <td><span class="count">{{ one.count }}</span></td>
+        <td>
+        <a href="{% url 'edit' one.id 1 %}">
+            <button> + </button>
+        </a>
+        </td>
+    <td><span id="summa">{{ one.summa }}</span></td>
+    <td>
+        <a href="{% url 'delete' one.id %}">
+        <button>Удалить</button>
+        </a>
+    </td>
+    </tr>
+    {% endfor %}
+</table>
+    <h3>Итог: {{ total }} рублей</h3>
+    <button class="zakazbtn" id="but1">Оформить заказ</button>
+    <form action="" method="post" hidden id="form1">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Оформить">
+    </form>   
+    {% endif %}
+{% endblock %}

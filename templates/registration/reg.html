@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% load static %}
+ <html lang="ru">
+{% block head %}
+    <meta charset="UTF-8">
+    <title>PyxoBNk</title>
+        <link rel="stylesheet" href={% static 'css/Menu.css'  %}>
+        <link rel="stylesheet" href={% static 'css/catalog.css'  %}>
+        <link rel="stylesheet" href={% static 'css/login.css'  %}>
+    
+{% endblock %}
+{% block content %}
+<h2>Регистрация</h2>
+    <form class="login" action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Отправить">
+    </form>
+{% endblock %}

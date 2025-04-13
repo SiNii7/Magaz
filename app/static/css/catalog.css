@@ -1,0 +1,90 @@
+.main-catalog{
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 85%;
+}
+
+.card {
+    width: 30%;
+    border: 2px solid darkgrey;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.card:hover{
+    background-color: ghostwhite;
+}
+
+
+.tovar{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+
+.tovar:hover {
+  /*background-color: black;*/
+  color: dimgray;
+}
+
+.incard_name{
+    /*border-top: 1px solid gray;*/
+    width: 50%;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.categorii{
+    display: flex;
+    width: 75%;
+    margin: auto;
+    margin-top: 0px;
+    padding: 20px;
+    background-color: #cccccc;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.categorii div{
+    width: 80%;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.categorii div a{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+.categorii div:hover{
+    background-color: ghostwhite;
+    color: #333;
+    transition: background-color 0.5s ease;
+}
+
+.butcart{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    width:150px;
+    font-weight: bolder;
+}
+.butcart:hover{
+    cursor: pointer;
+    background-color: darkgray;
+    transition: background-color 0.5s ease;
+}
+

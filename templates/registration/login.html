@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% load static %}
+<html lang="ru">
+{% block head %}
+    <meta charset="UTF-8">
+    <title>PyxoBNk</title>
+        <link rel="stylesheet" href={% static 'css/Menu.css'  %}>
+        <link rel="stylesheet" href={% static 'css/catalog.css'  %}>
+        <link rel="stylesheet" href={% static 'css/login.css'  %}>
+    
+{% endblock %}
+{% block content %}
+    <form class="login" action="" method="post">
+    {% csrf_token %}
+        {{ form.as_div }}
+        <input id="log" type="submit" value="Войти"><br>
+        
+    </form>
+    <div class="pass">
+        <a href="{% url 'password_reset' %}">Забыл пароль</a>
+        <a href="{% url 'reg' %}">Регистрация</a>
+    </div>
+{% endblock %}

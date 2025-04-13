@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fd78820f-33db-41db-9864-c134bc04a466" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/djangoDiplomMagazin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0002_colors_alter_category_name_tovar_colors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0003_size_tovar_size.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0004_remove_tovar_size_tovar_size.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0005_alter_tovar_price_alter_tovar_size.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0006_status_profile_order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/Menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/catalog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/img/coll25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/img/pyx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/img/pyx1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/js/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoDiplomMagazin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoDiplomMagazin/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoDiplomMagazin/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoDiplomMagazin/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoDiplomMagazin/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cabinet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/catalog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/otovare.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/reg.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2uS04SIKilSfMKduswIljDqmeN2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.djangoDiplomMagazin.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sania/PycharmProjects/djangoDiplomMagazin/app/static/img&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sania\PycharmProjects\djangoDiplomMagazin\app\static\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sania\PycharmProjects\djangoDiplomMagazin" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="djangoDiplomMagazin" type="Python.DjangoServer" factoryName="Django server">
+      <module name="djangoDiplomMagazin" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="djangoDiplomMagazin.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (djangoDiplomMagazin)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8001" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://localhost:8001" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd78820f-33db-41db-9864-c134bc04a466" name="Changes" comment="" />
+      <created>1742226476625</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742226476625</updated>
+      <workItem from="1742226477966" duration="2605000" />
+      <workItem from="1742729647244" duration="5540000" />
+      <workItem from="1742735398145" duration="1055000" />
+      <workItem from="1742825625577" duration="6709000" />
+      <workItem from="1742839621937" duration="90000" />
+      <workItem from="1742839735775" duration="36000" />
+      <workItem from="1742840564166" duration="214000" />
+      <workItem from="1743056676304" duration="60000" />
+      <workItem from="1743322315196" duration="16461000" />
+      <workItem from="1743428052464" duration="18767000" />
+      <workItem from="1743860336268" duration="1824000" />
+      <workItem from="1743872693299" duration="12511000" />
+      <workItem from="1743921263239" duration="16954000" />
+      <workItem from="1743942528508" duration="15000" />
+      <workItem from="1743942629529" duration="6666000" />
+      <workItem from="1744195524444" duration="6915000" />
+      <workItem from="1744463099879" duration="27113000" />
+      <workItem from="1744522674771" duration="314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

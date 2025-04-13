@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="categorii">
+        {% for one in cat %}
+            <div>
+            {% if group == 1 %}
+                <a href="{% url 'formancat' one.name %}">{{ one.name }}</a>
+            {% else %}    
+                <a href="{% url 'forwomancat' one.name %}">{{ one.name }}</a>
+            {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <br>
+    <div class="main-catalog">
+                {% if itemslen == 0 %}
+                    <div>нет товаров</div>
+                {% endif %}
+            {% for one in items %}
+                <div class="card">
+                <a class="tovar" href="{% url 'otovare' one.name %}">
+                    <img src="{% static one.image %}" alt="" height="250px" width="auto">
+                    <h3 class="incard_name">{{ one.name }}</h3>
+                    <p>{{ one.price }} руб</p>
+                </a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'buy' one.id %}">
+                            <button class="butcart">В КОРЗИНУ</button>
+                        </a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+                
+    </div>
+{% endblock %}

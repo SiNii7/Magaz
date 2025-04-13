@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>PyxoBNk</title>
+        <link rel="stylesheet" href={% static 'css/Menu.css'  %}>
+        <link rel="stylesheet" href={% static 'css/catalog.css'  %}>
+        
+        
+    {% endblock %}
+</head>
+<body>
+    <div class="main">
+    {% block menu %}
+        <nav>
+        <ul>
+            <li >
+                <a href="{% url 'index' %}" id="logo"><img src="{% static 'img/pyx1.jpg' %}" alt="" height="50px" width="150px"></a>
+            </li>
+            <li>
+                <a href="{% url 'forman' %}">Мужчинам</a>
+            </li>
+            <li>
+                <a href="{% url 'forwoman' %}">Женщинам</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li>
+                <a href="{% url 'cabinet' %}">Профиль: {{ user.username }}</a>
+            </li>
+            {% else %}
+            <li>
+                <a href='http://localhost:8001/accounts/login/'>Вход</a>
+            </li>
+            {% endif %}
+            <li>
+                <a href="{% url 'cart' %}">Корзина</a>
+            </li>
+        </ul>
+        </nav>
+    {% endblock %}
+    <div class="page">
+    {% block content %}
+        {% if user.is_anonymous %}
+        <h3 id="hello">Здравствуйте ! Рады приветствовать вас в нашем интернет магазине.<br> Что бы добавлять товары в корзину
+            пожалуйста выполните вход или зарегистрируйтесь на нашем сайте ! Приятных покупок )</h3>
+        {% endif %}
+        <img src="{% static 'img/coll25.jpg' %}" alt="" height="600px" width="85%" id="wall">
+        <div class="main-catalog">
+{#                {% for one in items %}#}
+{#                    <div class="card">#}
+{#                        <a class="tovar" href="{% url 'otovare' one.name %}">#}
+{#                            <img src="{% static one.image %}" alt="" height="250px" width="auto">#}
+{#                            <h3>{{ one.name }}</h3>#}
+{#                            <h3>{{ finPrice }}</h3>#}
+{#                            <p>{{ one.price }} руб</p>#}
+{#                        </a>    #}
+{#                    </div>#}
+{#                {% endfor %}#}
+                {% for one in randTov %}
+                    <div class="card">
+                        <a class="tovar" href="{% url 'otovare' one.name %}">
+                            <img src="{% static one.image %}" alt="" height="250px" width="auto">
+                            <h3>{{ one.name }}</h3>
+                            <h3>{{ finPrice }}</h3>
+                            <p>{{ one.price }} руб</p>
+                        </a>    
+                    </div>
+                {% endfor %}
+        </div>
+    {% endblock %}
+    </div>
+    
+    <footer>
+    {% block footer %}
+        <div class="footer">
+            <img src="{% static 'img/pyx1.jpg' %}" alt="" height="50px" width="150px">
+            <div>
+                <span>ООО "Пуховик" 2024 - 2025. Все права защищены.</span>
+                <p>
+                    <a href ="https://2gis.ru/tyumen/geo/70030076203006670/65.573705%2C57.160439?m=65.574711%2C57.160456%2F16.09" id="adress">
+                    Адрес: Новгородская 3
+                    </a>
+                </p>
+                <p>Телефон: 89599999999</p>
+                <p>Почта: qwe@mail.ru</p>
+            </div>
+        </div>
+    {% endblock %}
+    </footer>
+    </div>
+</body>
+</html>

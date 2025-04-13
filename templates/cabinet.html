@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href={% static 'css/menu.css' %}>    
+    <link rel="stylesheet" href={% static 'css/catalog.css' %}>
+    <link rel="stylesheet" href={% static 'css/login.css' %}>
+    <link rel="stylesheet" href={% static 'css/cabinet.css' %}>
+    <script src="{% static 'js/cabinet.js' %}" defer></script>
+{% endblock %}
+{%  block content %}
+    <h3>Это ваш профиль {{ user.username }}</h3>
+    
+    <h3>Ваши заказы: </h3>
+    <table>
+    <tr>
+        <th>Дата заказа:</th>
+        <th>Адрес:</th>
+        <th>Телефон:</th>
+        <th>Итог:</th>
+        <th>Статус:</th>
+        <th></th>
+    </tr>
+    {% for one in orders %}
+        <tr>
+        <td>{{ one.data }}</td>
+        <td>{{ one.adress }}</td>
+        <td>{{ one.tel }}</td>
+        <td>{{ one.total }}</td>
+        <td>{{ one.status }}</td>
+        <td id="full">
+        <button onclick="f1('{{ one.id }}', '{{ one.zakaz }}')">Подробнее</button>
+            <p id="{{ one.id }}"></p>
+        </td>
+        </tr>
+    {% endfor %}
+    </table>
+    <a><form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <input class="butcart" type="submit" value="Выход">
+        </form>
+    </a>
+{% endblock %}

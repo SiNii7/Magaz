@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+    {% for one in items %}
+        <h2>товар {{ one.name }}</h2>
+        <img src="{% static one.image %}" alt="" height="500px" width="auto">
+        <p>{{ one.price }} руб</p>
+        <p>Раздел: {{ one.group }}</p>
+        <p>Вид товара: {{ one.category }}</p>
+        <p>Цвет: {{ one.colors }}</p>
+        <span>Размеры: </span>
+        {% for k in one.size.all %}
+            <span class="sizes">{{ k.name }}</span>
+        {% endfor %}
+        <br><br>
+        {% if user.is_authenticated %}
+            <a href="{% url 'buy' one.id %}">
+                <button class="butcart">В КОРЗИНУ</button>
+            </a>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

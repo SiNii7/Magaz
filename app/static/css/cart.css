@@ -1,0 +1,117 @@
+.zakazbtn{
+    border: none;
+    width: 200px;
+    height: 50px;
+    color: black;
+    background-color: #c1c1c1;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-weight: bolder;
+    transition: background-color 0.5s ease;
+}
+
+form {
+    margin: auto;
+    padding: 30px;
+    background-color: dimgray; /* Темный фон */
+    border-radius: 20px;
+    color: white;
+    width: 30%;
+    transition: background-color 0.5s ease;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: black;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #555; /* Темная рамка */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #444; /* Еще более темный фон для полей */
+    color: black; /* Светлый текст для полей */
+    font-family: sans-serif;
+}
+
+input[type="checkbox"] {
+    border:1px solid gray;
+    width: 50px;
+    height: 50px;
+    border-radius:10px ;
+    background: black;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea,
+input[type="checkbox"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #888; /* Более светлая рамка при фокусе */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2); /* Светлая тень при фокусе */
+}
+
+input[type="submit"] {
+    background-color: #555;
+    color: black;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: black;
+}
+.table{
+    margin: 20px 100px 20px 100px;
+    font-weight: bolder;
+    padding: 20px;
+    width: auto;
+    /*display: flex;*/
+    background-color: #ececec;
+    border-radius: 20px;
+}
+
+.table td a button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #cccccc;
+}
+.table td a button:hover{
+    background-color: #6f6f6f;
+    transition: background-color 0.5s ease;
+}
+
+.table td{
+    padding: 10px;
+}
+.table td span{
+    padding: 10px;
+    width: 80px;
+}
+
+.count{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#summa{
+    width: 800px;
+    margin: 0px;
+    padding: 0px;
+}

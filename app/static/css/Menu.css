@@ -1,0 +1,124 @@
+body {
+  margin: auto;
+  margin-top: 0px;
+  font-family: Gill Sans, sans-serif;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.page{
+  flex: 1 1 auto;
+}
+
+nav {
+  background-color: darkgrey;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 98%;
+  margin: auto;
+}
+
+
+nav ul {
+  list-style: none; /* Убирает маркеры списка */
+  padding: 0; /* Убирает отступы по умолчанию для ul */
+  margin: auto; /* Убирает отступы по умолчанию для ul */
+  display: flex; /* Для горизонтального расположения элементов (по умолчанию) */
+  width: 90%;
+  padding-top: 1rem;
+  padding-bottom: 1px;
+}
+
+/* Стили для элементов списка (<li>) */
+nav ul li {
+  margin-right: 20px; /* Пример: добавляет отступ справа между элементами */
+  width: 70%;
+  text-align: center;
+
+
+  /* Или для разделения вертикального меню: */
+  /* border-bottom: 1px solid #ccc; */
+}
+
+/* Стили для последного элемента списка (необязательно) */
+nav ul li:last-child {
+  margin-right: 0; /* Убирает отступ справа у последнего элемента */
+}
+
+
+/* Пример стилей для ссылок внутри списка (если у вас есть ссылки) */
+nav ul li a {
+  display: block; /* Занимает всю ширину li, если нужно */
+  padding: 15px 5px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.5s ease; /* Плавный переход цвета фона при наведении */
+  vertical-align: center;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+nav ul li a.active {
+  background-color: #ccc;
+  color: #fff;
+}
+
+img {
+  border-radius: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#logo{
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+
+footer{
+  display: block;
+  width: 100%;
+  margin: 50px 0px 0px 0px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: #cccccc;
+  background-color: #2c2c2c;
+}
+
+#adress{
+  text-decoration: none;
+  color: #cccccc;
+}
+#adress:hover{
+  background-color: dimgray;
+  transition: background-color 0.5s ease;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#hello{
+  margin: 10px auto 5px auto;
+  width: 80%;
+  padding: 15px;
+  color: #636363;
+  line-height: 2;
+  border-radius: 20px;
+  /*background-color: #e3e0e0;*/
+}
+#wall{
+  margin: 10px 0px 20px 0px;
+  width: 100%;
+  height: 500px;
+  border-radius: 0px;
+}

@@ -1,0 +1,62 @@
+table {
+  width: 80%;
+  display: table;
+  border-collapse: collapse; /* Объединяет границы ячеек */
+  margin: auto;
+  font-size: 1em;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 8px; /* Внутренние отступы в ячейках */
+  text-align: left; /* Выравнивание текста по левому краю */
+
+  border-radius: 10px;
+}
+
+th {
+  background-color: #f2f2f2; /* Светло-серый фон для заголовков */
+  font-weight: bold; /* Жирный шрифт для заголовков */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Чересстрочная расцветка (для четных строк) */
+}
+
+/* При наведении на строку */
+tr:hover {
+  background-color: #eee; /* Цвет фона при наведении */
+}
+
+h3 {
+  font-size: 1.5em; /* Размер шрифта (можно настроить) */
+  font-weight: lighter; /* Жирный шрифт */
+  color: #333; /* Темно-серый цвет текста */
+  margin-bottom: 15px; /* Отступ снизу */
+  padding-bottom: 5px; /* Отступ снизу (для линии) */
+}
+
+#full{
+  width: 400px;
+}
+
+button{
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #c1c1c1;
+}
+
+.info{
+  width: auto;
+  display: flex;
+  margin-left: 50px;
+  justify-content: left;
+}
+.info ul{
+  list-style: none;
+  text-align: left;
+  padding: 20px;
+}
