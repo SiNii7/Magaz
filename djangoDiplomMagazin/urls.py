@@ -40,5 +40,6 @@ urlpatterns = [
     path('tolike/',views.tolike),
     path('forman/tolike/',views.tolike),
     path('forwoman/tolike/',views.tolike),
+    path('cabinet/tolike/',views.tolike),
 
 ]

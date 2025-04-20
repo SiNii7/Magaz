@@ -1,5 +1,4 @@
 let likes = document.getElementsByClassName('like')
-console.log(likes)
 
 for (l of likes){
     l.onclick = f1

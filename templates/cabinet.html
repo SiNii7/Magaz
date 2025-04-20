@@ -6,7 +6,7 @@
     <link rel="stylesheet" href={% static 'css/catalog.css' %}>
     <link rel="stylesheet" href={% static 'css/login.css' %}>
     <link rel="stylesheet" href={% static 'css/cabinet.css' %}>
-{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="{% static 'js/cabinet.js' %}" defer></script>
     <script src="{% static 'js/catalog.js' %}" defer></script>
 {% endblock %}
@@ -20,6 +20,11 @@
                     <h3 class="incard_name">{{ one.tovar.name }}</h3>
                     <p>{{ one.tovar.price }} руб</p>
                     {% if user.is_authenticated %}
+                        {% if one.tovar.like_set.values %}
+                            <img class='like' src="{% static 'img/like.jpg' %}" alt="" id = {{ one.tovar.id }}  >
+                        {% else %}
+                            <img class='like' src="{% static 'img/nolike.jpg' %}" alt="" id = {{ one.tovar.id }}  >
+                        {% endif %}
                         <a href="{% url 'buy' one.tovar.id %}">
                             <button class="butcart">В КОРЗИНУ</button>
                         </a>
