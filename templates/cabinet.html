@@ -6,7 +6,7 @@
     <link rel="stylesheet" href={% static 'css/catalog.css' %}>
     <link rel="stylesheet" href={% static 'css/login.css' %}>
     <link rel="stylesheet" href={% static 'css/cabinet.css' %}>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>#}
     <script src="{% static 'js/cabinet.js' %}" defer></script>
     <script src="{% static 'js/catalog.js' %}" defer></script>
 {% endblock %}
@@ -20,7 +20,7 @@
                     <h3 class="incard_name">{{ one.tovar.name }}</h3>
                     <p>{{ one.tovar.price }} руб</p>
                     {% if user.is_authenticated %}
-                        <a href="{% url 'buy' one.id %}">
+                        <a href="{% url 'buy' one.tovar.id %}">
                             <button class="butcart">В КОРЗИНУ</button>
                         </a>
                     {% endif %}
@@ -45,7 +45,7 @@
         <td>{{ one.total }}</td>
         <td>{{ one.status }}</td>
         <td id="full">
-        <button onclick="f1('{{ one.id }}', '{{ one.zakaz }}')">Подробнее</button>
+        <button onclick="f2('{{ one.id }}', '{{ one.zakaz }}')">Подробнее</button>
             <p id="{{ one.id }}"></p>
         </td>
         </tr>

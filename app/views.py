@@ -15,7 +15,7 @@ def index(request):
     items = Tovar.objects.all()
     size = Size.objects.all()
     cat = Category.objects.all()
-    carts = Cart.objects.all()
+    carts = Cart.objects.filter(user_id=request.user.id)
     c = 0
     for one in carts:
         c += one.count
@@ -31,7 +31,7 @@ def forman(request):
     itemslen = len(items)
     size = Size.objects.all()
     cat = Category.objects.all()
-    carts = Cart.objects.all()
+    carts = Cart.objects.filter(user_id=request.user.id)
     c = 0
     for one in carts:
         c += one.count
@@ -44,7 +44,7 @@ def formancat(request, cat2):
     size = Size.objects.all()
     items = Tovar.objects.filter(group__id=1, category__name=cat2)
     itemslen = len(items)
-    carts = Cart.objects.all()
+    carts = Cart.objects.filter(user_id=request.user.id)
     c = 0
     for one in carts:
         c += one.count
@@ -56,7 +56,7 @@ def forwoman(request):
     itemslen = len(items)
     cat = Category.objects.all()
     size = Size.objects.all()
-    carts = Cart.objects.all()
+    carts = Cart.objects.filter(user_id=request.user.id)
     c = 0
     for one in carts:
         c += one.count
@@ -69,7 +69,7 @@ def forwomancat(request, cat2):
     size = Size.objects.all()
     items = Tovar.objects.filter(group__id=2, category__name=cat2)
     itemslen = len(items)
-    carts = Cart.objects.all()
+    carts = Cart.objects.filter(user_id=request.user.id)
     c = 0
     for one in carts:
         c += one.count
@@ -79,7 +79,7 @@ def forwomancat(request, cat2):
 def otovare(request, itemid):
     items = Tovar.objects.filter(name=itemid)
     size = Size.objects.all()
-    carts = Cart.objects.all()
+    carts = Cart.objects.filter(user_id=request.user.id)
     c = 0
     for one in carts:
         c += one.count
@@ -90,11 +90,11 @@ def otovare(request, itemid):
 def cabinet(request):
     orders = Order.objects.filter(user_id=request.user.id)
     likes = like.objects.filter(user_id=request.user.id)
-    carts = Cart.objects.all()
+    carts = Cart.objects.filter(user_id=request.user.id)
     c = 0
     for one in carts:
         c += one.count
-    data = {'orders':orders,'c':c,'carts':carts,'likes':likes}
+    data = {'orders':orders,'carts':carts,'likes':likes,'c':c}
     return render(request,'cabinet.html', data)
 
 def registration(request):
@@ -125,7 +125,7 @@ def registration(request):
 def cart(request):
     items = Cart.objects.filter(user_id=request.user.id)
     itemslen = len(items)
-    carts = Cart.objects.all()
+    carts = Cart.objects.filter(user_id=request.user.id)
     c = 0
     for one in carts:
         c += one.count
