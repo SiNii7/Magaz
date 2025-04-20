@@ -6,11 +6,27 @@
     <link rel="stylesheet" href={% static 'css/catalog.css' %}>
     <link rel="stylesheet" href={% static 'css/login.css' %}>
     <link rel="stylesheet" href={% static 'css/cabinet.css' %}>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="{% static 'js/cabinet.js' %}" defer></script>
+    <script src="{% static 'js/catalog.js' %}" defer></script>
 {% endblock %}
 {%  block content %}
     <h3>Это ваш профиль {{ user.username }}</h3>
-    
+    <p>Ващи любимые товары:</p>
+    <div class="main-catalog">
+    {% for one in likes %}
+        <div class="card">
+                    <img src="{% static one.tovar.image %}" alt="" height="100px" width="auto">
+                    <h3 class="incard_name">{{ one.tovar.name }}</h3>
+                    <p>{{ one.tovar.price }} руб</p>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'buy' one.id %}">
+                            <button class="butcart">В КОРЗИНУ</button>
+                        </a>
+                    {% endif %}
+        </div>
+    {% endfor %}
+    </div>
     <h3>Ваши заказы: </h3>
     <table>
     <tr>

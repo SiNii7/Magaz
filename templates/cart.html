@@ -46,9 +46,9 @@
     </tr>
     {% endfor %}
 </table>
-    <h3>Итог: {{ total }} рублей</h3>
+    <h3 class="itog">Итог: {{ total }} рублей</h3>
     <button class="zakazbtn" id="but1">Оформить заказ</button>
-    <form action="" method="post" hidden id="form1">
+    <form action="" method="post" hidden id="form1" novalidate>
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Оформить">

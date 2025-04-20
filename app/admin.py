@@ -8,6 +8,7 @@ admin.site.register(Group)
 admin.site.register(Colors)
 admin.site.register(Size)
 admin.site.register(Status)
+admin.site.register(Order)
 
 
 class adminTovar(admin.ModelAdmin):

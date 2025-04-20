@@ -37,5 +37,8 @@ urlpatterns = [
     path('cart/edit/<int:itemid>/<str:num>', views.edit, name='edit'),
     path('cart/delete/<int:itemid>', views.delete, name='delete'),
     path('catalog/buy/<int:itemid>',views.buy, name='buy'),
+    path('tolike/',views.tolike),
+    path('forman/tolike/',views.tolike),
+    path('forwoman/tolike/',views.tolike),
 
 ]

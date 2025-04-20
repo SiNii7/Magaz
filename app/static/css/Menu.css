@@ -122,3 +122,9 @@ footer{
   height: 500px;
   border-radius: 0px;
 }
+
+.cartlen {
+  padding: 10px;
+  background-color: #eaea46;
+  border-radius: 15px;
+}

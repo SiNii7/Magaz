@@ -73,3 +73,7 @@ class Order(models.Model):
 
     def __str__(self):
         return f'{self.data} --- {self.adress}'
+
+class like(models.Model):
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    tovar = models.ForeignKey(to=Tovar, on_delete=models.CASCADE)

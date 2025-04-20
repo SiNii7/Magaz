@@ -7,8 +7,8 @@
     <title>PyxoBNk</title>
         <link rel="stylesheet" href={% static 'css/Menu.css'  %}>
         <link rel="stylesheet" href={% static 'css/catalog.css'  %}>
-        
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="{% static 'js/catalog.js' %}" defer></script>
     {% endblock %}
 </head>
 <body>
@@ -35,7 +35,7 @@
             </li>
             {% endif %}
             <li>
-                <a href="{% url 'cart' %}">Корзина</a>
+                <a href="{% url 'cart' %}">Корзина <span class="cartlen">{{ c }}</span></a>
             </li>
         </ul>
         </nav>

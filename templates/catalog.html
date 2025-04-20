@@ -25,6 +25,11 @@
                     <h3 class="incard_name">{{ one.name }}</h3>
                     <p>{{ one.price }} руб</p>
                 </a>
+                {% if one.like_set.values %}
+                        <img class='like' src="{% static 'img/like.jpg' %}" alt="" id = {{ one.id }}  >
+                        {% else %}
+                        <img class='like' src="{% static 'img/nolike.jpg' %}" alt="" id = {{ one.id }}  >
+                {% endif %}
                     {% if user.is_authenticated %}
                         <a href="{% url 'buy' one.id %}">
                             <button class="butcart">В КОРЗИНУ</button>

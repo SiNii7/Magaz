@@ -15,10 +15,14 @@ def index(request):
     items = Tovar.objects.all()
     size = Size.objects.all()
     cat = Category.objects.all()
+    carts = Cart.objects.all()
+    c = 0
+    for one in carts:
+        c += one.count
     randTov =[]
     for i in range(0,6):
         randTov.append(random.choice(items))
-    data = {'items': items, 'size': size, 'cat': cat, 'randTov': randTov}
+    data = {'items': items, 'size': size, 'cat': cat, 'randTov': randTov,'carts':carts,'c':c}
     return render(request, 'index.html', data)
 
 
@@ -27,7 +31,11 @@ def forman(request):
     itemslen = len(items)
     size = Size.objects.all()
     cat = Category.objects.all()
-    data = {'items': items, 'cat': cat, 'group': 1, 'size': size,'itemslen': itemslen}
+    carts = Cart.objects.all()
+    c = 0
+    for one in carts:
+        c += one.count
+    data = {'items': items, 'cat': cat, 'group': 1, 'size': size,'itemslen': itemslen,'c':c,'carts':carts}
     return render(request, 'catalog.html', data)
 
 def formancat(request, cat2):
@@ -36,7 +44,11 @@ def formancat(request, cat2):
     size = Size.objects.all()
     items = Tovar.objects.filter(group__id=1, category__name=cat2)
     itemslen = len(items)
-    data = {'items': items, 'cat': cat, 'cat2': cat2,'group': 1, 'size': size,'itemslen': itemslen}
+    carts = Cart.objects.all()
+    c = 0
+    for one in carts:
+        c += one.count
+    data = {'items': items, 'cat': cat, 'cat2': cat2,'group': 1, 'size': size,'itemslen': itemslen,'c':c,'carts':carts}
     return render(request, 'catalog.html', data)
 
 def forwoman(request):
@@ -44,7 +56,11 @@ def forwoman(request):
     itemslen = len(items)
     cat = Category.objects.all()
     size = Size.objects.all()
-    data = {'items': items, 'cat': cat, 'group': 2, 'size': size,'itemslen': itemslen}
+    carts = Cart.objects.all()
+    c = 0
+    for one in carts:
+        c += one.count
+    data = {'items': items, 'cat': cat, 'group': 2, 'size': size,'itemslen': itemslen,'c':c,'carts':carts}
     return render(request, 'catalog.html',data)
 
 def forwomancat(request, cat2):
@@ -53,21 +69,32 @@ def forwomancat(request, cat2):
     size = Size.objects.all()
     items = Tovar.objects.filter(group__id=2, category__name=cat2)
     itemslen = len(items)
-    data = {'items': items, 'cat': cat, 'cat2': cat2,'group': 2, 'size': size,'itemslen': itemslen}
+    carts = Cart.objects.all()
+    c = 0
+    for one in carts:
+        c += one.count
+    data = {'items': items, 'cat': cat, 'cat2': cat2,'group': 2, 'size': size,'itemslen': itemslen,'c':c,'carts':carts}
     return render(request, 'catalog.html', data)
 
 def otovare(request, itemid):
     items = Tovar.objects.filter(name=itemid)
     size = Size.objects.all()
-    data = {'items': items, 'size': size}
+    carts = Cart.objects.all()
+    c = 0
+    for one in carts:
+        c += one.count
+    data = {'items': items, 'size': size,'c':c,'carts':carts}
     return render(request,'otovare.html',data)
-
 
 
 def cabinet(request):
     orders = Order.objects.filter(user_id=request.user.id)
-    # likes = like.objects.filter(user_id=request.user.id)
-    data = {'orders':orders}
+    likes = like.objects.filter(user_id=request.user.id)
+    carts = Cart.objects.all()
+    c = 0
+    for one in carts:
+        c += one.count
+    data = {'orders':orders,'c':c,'carts':carts,'likes':likes}
     return render(request,'cabinet.html', data)
 
 def registration(request):
@@ -98,6 +125,10 @@ def registration(request):
 def cart(request):
     items = Cart.objects.filter(user_id=request.user.id)
     itemslen = len(items)
+    carts = Cart.objects.all()
+    c = 0
+    for one in carts:
+        c += one.count
     total = 0
     sps = ''
     form = OrderForm()
@@ -125,11 +156,11 @@ def cart(request):
             items.delete()
             total = 0
             sps = 'Спасибо за заказ ' + request.user.username
-            telegram('Привет')
+            telegram('Заказ :')
             zakaznew = zakaz.replace('<br>', '\n')
             telegram(zakaznew)
 
-    data = {'items': items, 'total': total, 'form': form,'itemslen': itemslen,'sps':sps}
+    data = {'items': items, 'total': total, 'form': form,'itemslen': itemslen,'sps':sps,'c':c,'carts':carts}
     return render(request, 'cart.html', data)
 
 def edit(request, itemid,num):
@@ -167,3 +198,15 @@ def telegram(message):
     chat = '279315648'
     bot = telebot.TeleBot(token)
     bot.send_message(chat, message)
+
+def tolike(request):
+    if request.GET:
+        k1 = request.GET.get('k1')
+        k2 = request.GET.get('k2')
+        print(k1,k2)
+        if like.objects.filter(user_id=request.user.id, tovar_id=k1):
+            item = like.objects.get(user_id=request.user.id, tovar_id=k1)
+            item.delete()
+        else:
+            like.objects.create(user_id=request.user.id,tovar_id=k1)
+        return JsonResponse({'message':'успешно'})

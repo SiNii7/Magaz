@@ -1,13 +1,19 @@
 .zakazbtn{
     border: none;
-    width: 200px;
-    height: 50px;
+    width: 15%;
+    height: 60px;
     color: black;
     background-color: #c1c1c1;
     margin-bottom: 10px;
-    border-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     font-weight: bolder;
     transition: background-color 0.5s ease;
+    font-size: 1rem;
+}
+
+.zakazbtn:hover {
+    background-color: #888888;
 }
 
 form {
@@ -64,7 +70,7 @@ select:focus {
 }
 
 input[type="submit"] {
-    background-color: #555;
+    background-color: #c1c1c1;
     color: black;
     padding: 14px 22px;
     border: none;
@@ -75,7 +81,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: black;
+    background-color: #2c2c2c;
 }
 .table{
     margin: 20px 100px 20px 100px;
@@ -114,4 +120,11 @@ input[type="submit"]:hover {
     width: 800px;
     margin: 0px;
     padding: 0px;
+}
+.itog{
+    padding: 15px;
+    background-color: #888888;
+    width: 20%;
+    margin: auto;
+    border-radius: 15px;
 }
